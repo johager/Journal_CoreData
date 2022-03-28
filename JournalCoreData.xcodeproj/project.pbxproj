@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		F832077427F2587300A230CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832077327F2587300A230CC /* AppDelegate.swift */; };
 		F832077627F2587300A230CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832077527F2587300A230CC /* SceneDelegate.swift */; };
-		F832077827F2587300A230CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832077727F2587300A230CC /* ViewController.swift */; };
+		F832077827F2587300A230CC /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832077727F2587300A230CC /* EntryListViewController.swift */; };
 		F832077B27F2587300A230CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F832077927F2587300A230CC /* Main.storyboard */; };
 		F832077D27F2587300A230CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F832077C27F2587300A230CC /* Assets.xcassets */; };
 		F832078027F2587300A230CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F832077E27F2587300A230CC /* LaunchScreen.storyboard */; };
+		F832078B27F258F800A230CC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832078A27F258F800A230CC /* CoreDataStack.swift */; };
+		F832078E27F2592500A230CC /* JournalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F832078C27F2592500A230CC /* JournalModel.xcdatamodeld */; };
+		F832079027F2597E00A230CC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832078F27F2597E00A230CC /* Entry.swift */; };
+		F832079227F25AA400A230CC /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832079127F25AA400A230CC /* EntryController.swift */; };
+		F832079627F25F8000A230CC /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F832079527F25F8000A230CC /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F832077027F2587300A230CC /* JournalCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F832077327F2587300A230CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F832077527F2587300A230CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F832077727F2587300A230CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F832077727F2587300A230CC /* EntryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewController.swift; sourceTree = "<group>"; };
 		F832077A27F2587300A230CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F832077C27F2587300A230CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F832077F27F2587300A230CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F832078127F2587300A230CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F832078A27F258F800A230CC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F832078D27F2592500A230CC /* JournalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalModel.xcdatamodel; sourceTree = "<group>"; };
+		F832078F27F2597E00A230CC /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		F832079127F25AA400A230CC /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		F832079527F25F8000A230CC /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		F832077227F2587300A230CC /* JournalCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F832077327F2587300A230CC /* AppDelegate.swift */,
-				F832077527F2587300A230CC /* SceneDelegate.swift */,
-				F832077727F2587300A230CC /* ViewController.swift */,
-				F832077927F2587300A230CC /* Main.storyboard */,
-				F832077C27F2587300A230CC /* Assets.xcassets */,
-				F832077E27F2587300A230CC /* LaunchScreen.storyboard */,
-				F832078127F2587300A230CC /* Info.plist */,
+				F832078927F258EA00A230CC /* Model */,
+				F832078827F258D400A230CC /* ViewControllers */,
+				F832079427F25E2E00A230CC /* Storyboards */,
+				F832078727F2588100A230CC /* Resources */,
 			);
 			path = JournalCoreData;
+			sourceTree = "<group>";
+		};
+		F832078727F2588100A230CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F832077327F2587300A230CC /* AppDelegate.swift */,
+				F832077527F2587300A230CC /* SceneDelegate.swift */,
+				F832077C27F2587300A230CC /* Assets.xcassets */,
+				F832078127F2587300A230CC /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F832078827F258D400A230CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F832079527F25F8000A230CC /* EntryDetailViewController.swift */,
+				F832077727F2587300A230CC /* EntryListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F832078927F258EA00A230CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F832078A27F258F800A230CC /* CoreDataStack.swift */,
+				F832078F27F2597E00A230CC /* Entry.swift */,
+				F832079127F25AA400A230CC /* EntryController.swift */,
+				F832078C27F2592500A230CC /* JournalModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F832079427F25E2E00A230CC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F832077927F2587300A230CC /* Main.storyboard */,
+				F832077E27F2587300A230CC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F832077827F2587300A230CC /* ViewController.swift in Sources */,
+				F832078E27F2592500A230CC /* JournalModel.xcdatamodeld in Sources */,
+				F832077827F2587300A230CC /* EntryListViewController.swift in Sources */,
+				F832079227F25AA400A230CC /* EntryController.swift in Sources */,
 				F832077427F2587300A230CC /* AppDelegate.swift in Sources */,
 				F832077627F2587300A230CC /* SceneDelegate.swift in Sources */,
+				F832078B27F258F800A230CC /* CoreDataStack.swift in Sources */,
+				F832079627F25F8000A230CC /* EntryDetailViewController.swift in Sources */,
+				F832079027F2597E00A230CC /* Entry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 37H8X6K6NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JournalCoreData/Info.plist;
+				INFOPLIST_FILE = JournalCoreData/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 37H8X6K6NN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JournalCoreData/Info.plist;
+				INFOPLIST_FILE = JournalCoreData/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,6 +410,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F832078C27F2592500A230CC /* JournalModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F832078D27F2592500A230CC /* JournalModel.xcdatamodel */,
+			);
+			currentVersion = F832078D27F2592500A230CC /* JournalModel.xcdatamodel */;
+			path = JournalModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F832076827F2587300A230CC /* Project object */;
 }
