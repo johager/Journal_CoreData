@@ -54,4 +54,10 @@ extension EntryListViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        EntryController.shared.deleteEntry(atIndex: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
 }
